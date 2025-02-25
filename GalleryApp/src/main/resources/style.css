@@ -1,0 +1,94 @@
+/* Root layout styling */
+.root { ~
+    -fx-background-color: linear-gradient(to bottom, #87CEEB, #ADD8E);
+    -fx-padding: 20px;
+}
+/* ScrollPane styling */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+.scroll-pane .scroll-bar:horizontal,
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+.scroll-pane .scroll-bar:horizontal .thumb,
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #00ffcc;
+    -fx-background-radius: 5px;
+}
+.scroll-pane .scroll-bar:horizontal .thumb:hover,
+.scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #00e6b8;
+}
+/* FlowPane styling */
+.flow-pane {
+    -fx-background-color: transparent;
+}
+/* Thumbnail styling */
+.thumbnail {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 10, 0, 0, 0);
+    -fx-border-radius: 10px;
+    -fx-border-color: #00ffcc;
+    -fx-border-width: 2px;
+    -fx-transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 204, 0.8), 20, 0, 0, 0);
+    -fx-cursor: hand;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Full image styling */
+.full-image {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 204, 0.8), 30, 0, 0, 0);
+    -fx-border-radius: 15px;
+    -fx-border-color: #00ffcc;
+    -fx-border-width: 3px;
+}
+
+/* Button box styling */
+.button-box {
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
+/* Navigation button styling */
+.nav-button {
+    -fx-background-color: linear-gradient(to bottom, #00ffcc, #009999);
+    -fx-text-fill: #1a1a1a;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 204, 0.5), 10, 0, 0, 0);
+    -fx-transition: all 0.3s ease;
+}
+.nav-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #00e6b8, #007a7a);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 204, 0.8), 15, 0, 0, 0);
+    -fx-cursor: hand;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+/* Responsive design */
+@media (max-width: 800px) {
+
+    .thumbnail {
+        -fx-fit-width: 100px;
+        -fx-fit-height: 100px;
+    }
+    .full-image {
+        -fx-fit-width: 300px;
+        -fx-fit-height: 200px;
+    }
+    .futuristic-button {
+        -fx-font-size: 14px;
+        -fx-padding: 8px 16px;
+    }
+}
+
